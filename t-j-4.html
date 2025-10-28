@@ -23,5 +23,34 @@
 <body>
     <h1>Кейс Т—Ж: Защита от наложения попапов</h1>
     <p>Тест 1</p>
+
+
+     <!-- Ручной попап -->
+<div id="manual-popup" style="display:none; position:fixed; top:50%; left:50%; 
+transform:translate(-50%, -50%); background:white; padding:20px; border:2px solid #333; 
+box-shadow:0 4px 10px rgba(0,0,0,0.3); z-index:1000;">
+  <h2>Регистрационный попап (тест)</h2>
+  <p>Это ручной попап для проверки наложения Altcraft-попапа.</p>
+  <button id="close-manual-popup">Закрыть</button>
+</div>
+
+<button id="show-manual-popup">Показать регистрационный попап</button>
+
+<script>
+  const manualPopup = document.getElementById('manual-popup');
+  const showBtn = document.getElementById('show-manual-popup');
+  const closeBtn = document.getElementById('close-manual-popup');
+
+  // Показ попапа
+  showBtn.addEventListener('click', () => {
+    manualPopup.style.display = 'block';
+  });
+
+  // Закрытие попапа
+  closeBtn.addEventListener('click', () => {
+    manualPopup.style.display = 'none';
+  });
+</script>
+
 </body>
 </html>
