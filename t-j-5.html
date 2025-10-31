@@ -22,22 +22,15 @@
 </head>
 <body>
     <h1>Кейс Т—Ж: Таргет вызова попапов по потоку или тегу (+ защита от наложения попапов)</h1>
-    <p>Test 1</p>
+    <p>Test 2</p>
   <script>
 
 
-if (localStorage.getItem('articleFlowsSlug')) {
-    window.articleData.articleFlowsSlug = JSON.parse(localStorage.getItem('articleFlowsSlug'));
-}
+
 
 
 
 function toggleFlow(flowSlug) {
-
-    localStorage.setItem('articleFlowsSlug', JSON.stringify(window.articleData.articleFlowsSlug));
-window.articleData = {
-    articleFlowsSlug: ["business-russia", "taxes-and-recoupments"]
-};
     
     const index = window.articleData.articleFlowsSlug.indexOf(flowSlug);
     
