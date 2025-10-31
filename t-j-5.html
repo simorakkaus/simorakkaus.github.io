@@ -42,35 +42,35 @@ window.articleData = {
     const index = window.articleData.articleFlowsSlug.indexOf(flowSlug);
     
     if (index === -1) {
-        // Добавляем поток
+
         window.articleData.articleFlowsSlug.push(flowSlug);
     } else {
-        // Удаляем поток
+
         window.articleData.articleFlowsSlug.splice(index, 1);
     }
     
-    // Обновляем страницу
+
     location.reload();
 }
 
-// Создаем кнопки после загрузки страницы
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Кнопка для business-russia
+
     const btn1 = document.createElement('button');
     btn1.textContent = 'Toggle business-russia';
     btn1.style.margin = '5px';
     btn1.onclick = () => toggleFlow('business-russia');
     
-    // Кнопка для taxes-and-recoupments
+
     const btn2 = document.createElement('button');
     btn2.textContent = 'Toggle taxes-and-recoupments';
     btn2.style.margin = '5px';
     btn2.onclick = () => toggleFlow('taxes-and-recoupments');
     
-    // Добавляем кнопки в начало body
+
     document.body.prepend(btn1, btn2);
     
-    // Информационный блок для отображения текущего состояния
+
     const info = document.createElement('div');
     info.innerHTML = `Текущие потоки: ${window.articleData.articleFlowsSlug.join(', ')}`;
     info.style.margin = '10px';
