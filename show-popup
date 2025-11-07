@@ -1,0 +1,22 @@
+<!-- Простая HTML страница для вызова попапа -->
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.altcraft.com/weblayers/weblayers.js"></script>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Показываем попап при загрузке страницы
+            if (typeof AltCraft !== 'undefined' && AltCraft.WebLayers) {
+                AltCraft.WebLayers.show(109903905);
+            }
+            
+            // Автоматическое закрытие окна через 2 секунды
+            setTimeout(function() {
+                window.close();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
